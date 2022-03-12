@@ -17,7 +17,7 @@ const Card: React.FC<ICard> = (props) => {
     } = props;
 
     return (
-        <div className="card-container">
+        <div id="card" className="card-container" onClick={()=> window.open(link, "_blank")}>
             <div className="thumbnail-container">
                 <img className="thumbnail" src={media.m ? media.m : ""} alt="Thumbnail Image"/>
             </div>
@@ -36,9 +36,9 @@ const Card: React.FC<ICard> = (props) => {
                     Tags: {tags}
                 </span>
             </div>
-            <div>
+            {/* <div>
                 <a href={link} target="_blank">Click here</a> to view full size image.
-            </div>
+            </div> */}
         </div>
     )
 }
