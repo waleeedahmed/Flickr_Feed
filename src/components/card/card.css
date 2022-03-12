@@ -1,0 +1,25 @@
+.card-container {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 400px;
+  min-width: 150px;
+  grid-template-rows: 43% 14% 9% 10% 10%;
+  /* grid-template-rows: repeat(5, 1fr); */
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  box-shadow: 3px 2px 5px #d5d5d5;
+  padding: 15px;
+}
+
+.thumbnail {
+  border-radius: 50%;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.thumbnail-container {
+  display: grid;
+  justify-content: center;
+}
