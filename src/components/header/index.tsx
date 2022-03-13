@@ -8,6 +8,9 @@ const Header: React.FC<any> = () => {
       <span className='headerSpan'>
         Flickr Photo Search
       </span>
+      <span className="anchor-link">
+        <a href="https://www.flickr.com/search/" target="_blank">Flickr Search Engine</a>
+      </span>
     </div>
   )
 }
