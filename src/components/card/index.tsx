@@ -6,12 +6,9 @@ const Card: React.FC<ICard> = (props) => {
 
     const {
         author,
-        author_id,
         date_taken,
-        description,
         link,
         media,
-        published,
         tags,
         title
     } = props;

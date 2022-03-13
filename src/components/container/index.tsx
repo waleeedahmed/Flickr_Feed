@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import './container.css';
-import Card from '../components/card';
-import Header from '../components/header';
-import { ASSISTIVE_TEXT, INPUT_TEXT } from '../common/common';
-import { ICard } from '../common/models';
-import { instance } from '../api/axios';
-import Loader from '../components/loader';
+import Card from '../card';
+import Header from '../header';
+import { ASSISTIVE_TEXT, INPUT_TEXT } from '../../common/common';
+import { ICard } from '../../common/models';
+import { instance } from '../../api/axios';
+import Loader from '../loader';
 
 function Container() {
 

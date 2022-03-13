@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Container from './';
+import Container from '.';
 
 test('Search textbox is empty upon initial page load', () => {
   render(<Container />);

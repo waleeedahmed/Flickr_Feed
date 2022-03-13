@@ -1,6 +1,4 @@
-import { useEffect } from 'react';
-import './App.css';
-import Container from './container';
+import Container from './components/container';
 
 function App() {
 
