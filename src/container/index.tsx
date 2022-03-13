@@ -20,6 +20,7 @@ function Container() {
             .then(res => {
                 setCards([...res.data.items])
             })
+            .catch(err => window.alert('API failed, error: ' + err))
             .finally(() => setLoader(false));
     }, [searchTerm])
 
