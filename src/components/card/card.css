@@ -4,9 +4,10 @@
   justify-content: center;
   align-items: flex-start;
   min-height: 400px;
+  max-height: 400px;
   min-width: 150px;
-  grid-template-rows: 43% 14% 9% 10% 10%;
-  /* grid-template-rows: repeat(5, 1fr); */
+  grid-template-rows: 12% 39% 12% 12% 12% 20%;
+  background-color: white;
   border: 1px solid lightgray;
   border-radius: 2px;
   box-shadow: 3px 2px 5px #d5d5d5;
@@ -27,4 +28,54 @@
 .thumbnail-container {
   display: grid;
   justify-content: center;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #484747;
+  text-align: center;
+}
+
+.title-div {
+  display: grid;
+  justify-content: center;
+}
+
+.info-div {
+  display: grid;
+  justify-content: center;
+}
+
+.info-heading {
+  justify-self: center;
+  font-weight: 600;
+}
+
+.tags {
+  text-align: center;
+}
+
+.hover-text-assist {
+  position: relative;
+  /* left: 23ch; */
+  /* bottom: 8ch; */
+  padding: 10px 10px;
+  border: 1px solid lightgray;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 2px 4px 5px lightgrey;
+  display: none;
+}
+
+#tags:hover + #hover-text-assist {
+  display: block;
+}
+
+#title:hover + #hover-text-assist {
+  display: block;
+}
+
+#hover-text-assist:hover {
+  display: block;
 }

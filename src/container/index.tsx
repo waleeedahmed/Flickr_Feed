@@ -3,20 +3,27 @@ import './container.css';
 import Card from '../components/card';
 import Header from '../components/header';
 import { ASSISTIVE_TEXT, INPUT_TEXT } from '../common/common';
-import axios from 'axios';
 import { ICard } from '../common/models';
+import { instance } from '../api/axios';
+import Loader from '../components/loader';
 
 function Container() {
 
     const [cards, setCards] = useState<ICard[]>([]);
+    const [searchTerm, setSearchTerm] = useState<string>("");
+    const [loader, setLoader] = useState<boolean>(false);
 
     useEffect(() => {
-        axios.get('https://www.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1', {
+        setLoader(true);
+        instance.get(searchTerm.length > 0 ? `&tags=${searchTerm}` : "", {
         })
-        .then(res => {
-          setCards([...res.data.items])
-        })
-      }, [])
+            .then(res => {
+                setCards([...res.data.items])
+            })
+            .finally(() => setLoader(false));
+    }, [searchTerm])
+
+
 
     return (
         <div className="container">
@@ -35,12 +42,15 @@ function Container() {
                     </span>
                 </div>
                 <div>
-                    <input className="input">
-                    </input>
+                    <input className="input" onChange={(event) => {
+                        setSearchTerm(event.target.value);
+                    }} />
                 </div>
                 <div className="cards-container">
                     {
-                        cards.map((card: ICard, index) => <Card key={index} {...card}/>)
+                        loader ? 
+                            <div className="loader"><Loader/></div> : 
+                            cards.map((card: ICard, index) => <Card key={index} {...card} />)
                     }
                 </div>
             </div>
