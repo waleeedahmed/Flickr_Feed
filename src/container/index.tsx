@@ -43,7 +43,9 @@ function Container() {
                 </div>
                 <div>
                     <input className="input" onChange={(event) => {
-                        setSearchTerm(event.target.value);
+                        // comma delimited list for multiple search tags
+                        var commaSearch = event.target.value.replaceAll(' ', ',');
+                        setSearchTerm(commaSearch);
                     }} />
                 </div>
                 <div className="cards-container">
