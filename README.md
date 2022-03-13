@@ -23,3 +23,8 @@ The search results update as soon as you type your query.
 You can view additional information about each photos' tag or title by hovering over it.
 If you click a photo card, you will be directed to the flickr application where the photo is 
 available full size.  
+
+# Important Note
+The Flickr public photos API denies requests due to CORS restrictions. To make the application 
+work, please make sure you have the chrome extension "Allow CORS, cross-origin-resource-sharing"
+installed and turned ON. 
