@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react';
 import './container.css';
 import Card from '../card';
 import Header from '../header';
-import { ASSISTIVE_TEXT, INPUT_TEXT } from '../../common/common';
+import { ASSISTIVE_TEXT, INPUT_TEXT, FLICKR_BASE_URL } from '../../common/common';
 import { ICard } from '../../common/models';
-import { instance } from '../../api/axios';
+import { flickerApi } from '../../api/axios';
 import Loader from '../loader';
+
 
 function Container() {
 
@@ -15,16 +16,16 @@ function Container() {
 
     useEffect(() => {
         setLoader(true);
-        instance.get(searchTerm.length > 0 ? `&tags=${searchTerm}` : "", {
-        })
-            .then(res => {
-                setCards([...res.data.items])
+        flickerApi(FLICKR_BASE_URL, `&tags=${searchTerm}`)
+            .then(function (response) {
+                return response.json()
+            }).then(function (json) {
+                setCards([...json.items])
+            }).catch(function (ex) {
+                window.alert('API failed: ' + ex);
             })
-            .catch(err => window.alert('API failed, error: ' + err))
             .finally(() => setLoader(false));
     }, [searchTerm])
-
-
 
     return (
         <div className="container">
@@ -51,8 +52,8 @@ function Container() {
                 </div>
                 <div className="cards-container">
                     {
-                        loader ? 
-                            <div className="loader"><Loader/></div> : 
+                        loader ?
+                            <div className="loader"><Loader /></div> :
                             cards.map((card: ICard, index) => <Card key={index} {...card} />)
                     }
                 </div>

@@ -1,7 +1,7 @@
-import axios from 'axios';
+import fetchJsonp from 'fetch-jsonp';
 
-export const instance = axios.create({
-    baseURL: 'https://www.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1'
-  });
-
-
+export const flickerApi = (url: string, queryparameters: string = ""): Promise<any> => {
+  return fetchJsonp(url + queryparameters, {
+    jsonpCallback: 'jsoncallback',
+  })
+}
