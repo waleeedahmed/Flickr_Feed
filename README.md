@@ -6,9 +6,9 @@ To get started with this project, please clone to your local machine, and run
 
 ### `npm start`
 
-There are a couple of unit tests on the main page, to execute those tests, please run 
+There are a couple of unit tests on the container component, to execute those tests, please run 
 
-### `npm test`
+### `npm test container.test.tsx`
 
 # A tour of the Application
 
