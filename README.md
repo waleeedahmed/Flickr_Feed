@@ -1,5 +1,7 @@
 # Welcome to Flickr Photo Feed Application
 
+View this project at https://master.d2rz5lydpn0hnz.amplifyapp.com/
+
 This project consumes the public API from https://www.flickr.com/services/feeds/docs/photos_public/
 
 To get started with this project, please clone to your local machine, and run 
