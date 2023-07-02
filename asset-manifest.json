@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Flickr_Feed/static/css/main.2210199d.css",
+    "main.js": "/Flickr_Feed/static/js/main.d7a527c4.js",
+    "static/js/787.f7cfac5b.chunk.js": "/Flickr_Feed/static/js/787.f7cfac5b.chunk.js",
+    "index.html": "/Flickr_Feed/index.html",
+    "main.2210199d.css.map": "/Flickr_Feed/static/css/main.2210199d.css.map",
+    "main.d7a527c4.js.map": "/Flickr_Feed/static/js/main.d7a527c4.js.map",
+    "787.f7cfac5b.chunk.js.map": "/Flickr_Feed/static/js/787.f7cfac5b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2210199d.css",
+    "static/js/main.d7a527c4.js"
+  ]
+}
