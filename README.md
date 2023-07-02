@@ -1,6 +1,6 @@
 # Welcome to Flickr Photo Feed Application
 
-View this project at https://master.d2rz5lydpn0hnz.amplifyapp.com/
+View this project at https://waleeedahmed.github.io/Flickr_Feed
 
 This project consumes the public API from https://www.flickr.com/services/feeds/docs/photos_public/
 
